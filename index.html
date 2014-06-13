@@ -1,0 +1,301 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Staying strong</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script>
+function nombre(){
+	var nom;
+	var can;
+	var anc;
+	var Cat;
+	var may;
+	nom=document.getElementById("textnom").value;
+	
+	may=nom.toUpperCase();
+	document.getElementById("textnom").value=may;
+	anc=may.length;
+	for(x=0; x<=anc-1; x++){
+		Cat=may.charAt(x);
+	if(((Cat>='A') && (Cat<='Z')) || (Cat==' ')){
+		}else{
+			alert("Se introdujo un carácter incorrecto(numérico)");
+				break;
+			}
+		}
+	}
+function Em(){
+	var Em, y, p, t, a, i;
+Em=document.getElementById("textmail").value;
+
+
+	if(((Em.charAt(0)>='0')&&(Em.charAt(0)<='9'))||(Em.charAt(0)=='@'))
+	{
+			alert("Primer carácter inválido");
+	}
+	else
+	{
+		p=Em.indexOf('@');
+		t=Em.lastIndexOf('@');
+		if(p!=t){
+			alert("Solo introduce un @");
+			
+		}
+		else{
+			if((p==-1)&&(t==-1))
+			{
+			alert("Introduce un @");	
+			
+				}
+				else{
+					a=Em.indexOf('.');
+					i=Em.lastIndexOf('.');
+	          if(a!=i)
+			  {
+				   alert("Sólo se reconoce un punto");
+			  }
+			  else{
+				  if((a==-1)&&(i==-1)){
+					  alert("Introduce un punto");
+					  
+					  }
+			  }
+					}
+			}
+	}		
+}
+
+function Tel(){
+	var nom;
+	var can;
+	var anc;
+	var Cat;
+	nom=document.getElementById("texttele").value;
+	anc=nom.length;
+	for(x=0; x<=anc-1; x++){
+		Cat=nom.charAt(x);
+	if(((Cat>=0) && (Cat<=9 ))|| (Cat=='-')){
+		}else{
+			alert("Se introdujo un carácter incorrecto(Letra)");
+				break;
+			}
+		}
+	}
+function Asu(){
+	var nom;
+	var may;
+	nom=document.getElementById("textasun").value;
+	may=nom.toUpperCase();
+	document.getElementById("textasun").value=may;
+	}
+	function Sug(){
+	var nom;
+	var se;
+	nom=document.getElementById("textseg").value;
+	se=document.getElementById("textse").value;
+	if(nom==se || se==""){
+		}else{
+			alert("Cifra incorrecta");
+			}
+	}
+function enviar(){
+	var nom;
+	var Em;
+	var	Tel;
+	var Asu;
+	var Sug;
+	var se;
+	nom=document.getElementById("textnom").value;
+	Em=document.getElementById("textmail").value;
+	Tel=document.getElementById("texttele").value;
+	Asu=document.getElementById("textasun").value;
+	Sug=document.getElementById("textseg").value;
+	se=document.getElementById("textse").value;
+	if(Sug!=se){
+		alert("Cifra de seguridad incorrecta");
+		}else{
+	if(nom=="" || Em=="" || Tel=="" || Asu=="" || Sug==""){
+		alert("Datos incompletos");
+		}else{
+			alert("Mensaje enviado");
+			document.getElementById("textnom").value="";
+			document.getElementById("textmail").value="";
+			document.getElementById("texttele").value="";
+			document.getElementById("textasun").value="";
+			document.getElementById("textse").value="";
+			}
+}
+}
+</script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Staying Strong</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+       <center><img src="imagenes/36663.png" width="58%" height="10%">
+       </center>
+			<li><a href="#page2">¿Quiénes somos?</a></li>
+            <li><a href="#page3">Servicios o productos</a></li>
+			<li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Contáctanos</a></li>
+           
+		</ul>		
+	</div>
+   
+	<div data-role="footer">
+		<h4>Autora: Reyna Bravo</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quiénes somos?</h1>
+	</div>
+	<div data-role="content">
+  
+    	 <center><center><img src="imagenes/landia.png" width="89%" height="24%"></center></center>
+				<h2>Misión</h2>
+                Cada día va a proporcinar a los lectores una cita, una reflexión personal y un objetivo. Estas son las palabras de Demi, palabras que vive y comparte con las personas que ama y completos extraños por igual. Son unos poderosos testimonios de una joven mujer de pie y luchando. 
+                <p>
+                 <center><img src="imagenes/cita.jpg" width="65%" height="26%"></center>
+                
+                <h2>Visión</h2>
+                
+                La escritora Demi Lovato ha reunido 365 de sus citas preferidas y un poco sobre meditación para hacer por las mañanas para todo el mundo. Espererando  que te inspire a ser fuerte. 
+                 <center><img src="imagenes/deme.png" width="35%" height="46%"></center>
+                <h2>Valores</h2>
+                Staying Strong es un libro que nos enseña a valorar nuestra vida y aprender de nuestros errores que hemos cometido para ello la literatura es muy importante porque da el valor de aprender a desarrollar nuestras ideas para seguir adelante.
+               <center><img src="imagenes/Staying Strong.jpg" width="35%" height="45%"></center>
+              
+	</div>
+	<div data-role="footer">
+		<h4>Staying Strong</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Servicios o productos</h1>
+	</div>
+	<div data-role="content">	
+    <center><h1>"Staying Strong"</h1></center>
+    "Staying Strong", o en español "Sé Fuerte" es el libro publicado por Demi Lovato, en el cual encontramos frases inspiradoras, consejos de meditación, además de una serie de objetivos diarios, que ella misma ha seleccionado y escrito.
+    en el que dice: "Una de las cosas que me ha ayudado en mi recuperación es disfrutar del día a día, y creo en el hecho de empezar el día con una frase inspiradora y un poco de meditación por la mañana". "Así que he reunido 365 de mis citas preferidas y un poco sobre meditación para hacer por las mañanas para todo el mundo... Espero que te inspire a ser fuerte".
+
+El libro de Demi Lovato cuenta con dos versiones: una en inglés titulada "Staying Strong", y otra en español, la cual lleva por título "Sé Fuerte".
+            
+            <p>
+<center>
+<img src="imagenes/se fuerte.jpg" width="65%" height="40%"></center>
+	</div>
+	<div data-role="footer">
+		<h4>Staying Strong</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo</h1>
+	</div>
+	<div data-role="content">	
+
+  <center> <img src="imagenes/reyna.jpg" width="35%" height="45%"></center>
+     <center><b>Reyna Esmeralda Bravo Regalado<br>
+       16 años<br>
+       Estudio actualmente la prepa en CBTis 184<br>
+        Especialidad: Técnico programador<br></b>
+
+	</div>
+    <center> <img src="imagenes/irelia.jpg" width="35%" height="45%"></center>
+     <center><b>Irelia Ruiz Arenas<br>
+       16 años<br>
+       Juega el fútbol<br>
+       Estudia actualmente en CBTis 184<br>
+      Especialidad: Técnico programador</b><br>
+	<div data-role="footer">
+		<h4>Staying Strong</h4>
+	</div>
+</div>
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Contáctanos</h1>
+	</div>
+	<div data-role="content">
+   <table>
+  <tr>
+    <td> <b>Dirección:</b> Interior Centro Comercial Angelopilos, Boulevard del Niño Poblano 2510, Concepción La Cruz, 72450 Puebla<br>
+    
+    <b>Correo electrónico:</b> staybook@hotmail.com<br>
+
+<b>Teléfono:</b>01 222 225 1746<br>
+
+  </td>
+    <td></td>
+  </tr>
+</table>
+
+<center><img src="imagenes/mapa.png" width="%" height="30%"></center>
+
+<h1>¿Desea mandar un mensaje?</h1>
+
+	<table width="0" border="0">
+  <tr>
+    <td><div data-role="fieldcontain">
+      <label for="textinput">Nombre:</label>
+      </td>
+    <td><input type="text" name="textnom" id="textnom" value="" onBlur="nombre()" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><label for="textinput">E-mal:</label></td>
+    <td><input type="text" name="textmail" id="textmail" value="" onBlur="Em()" /></td>
+  </tr>
+  <tr>
+    <td><label for="textinput">Teléfono:</label></td>
+    <td><input type="text" name="texttele" id="texttele" value="" onBlur="Tel()" /></td>
+  </tr>
+  <tr>
+    <td><div data-role="fieldcontain">
+      <label for="textarea">Asunto:</label>
+      </td>
+    <td><textarea cols="40" rows="8" name="textasun" id="textasun" onBlur="Asu()"></textarea>
+    </div></td>
+  </tr>
+  <tr>
+    <td><label for="textinput">Seguridad:</label></td>
+    
+    <td><input type="text" name="textseg" id="textseg" value="2014" disabled=""  /> 
+    
+    <input type="text" name="textse" id="textse" value="" onBlur="Sug()" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><button onClick="enviar()">Aceptar</button></td>
+    
+  </tr>
+</table>
+
+
+    </div>
+ 
+	<div data-role="footer">
+		<h4>Staying Strong</h4>
+	</div>
+</div>
+  
+
+		
+	
+    
+</div>
+
+</body>
+</html>
